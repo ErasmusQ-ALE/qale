@@ -729,8 +729,8 @@ const QALEQuestionnaire = () => {
           <div className="space-y-2">
             {[
               { value: 'organisation', label: 'Organisation Representatives 🏢', desc: 'Overall quality assurance and institutional processes' },
-              { value: 'manager', label: 'Organisation Manager 🏛️', desc: 'Keeping the lights on, rules legal, and people sane' },
-              { value: 'organiser', label: 'Course Organiser 📋', desc: 'Turning chaos into a curriculum' },
+              { value: 'manager', label: 'Manager 🏛️', desc: 'Keeping the lights on, rules legal, and people sane' },
+              { value: 'organiser', label: 'Course Designer 📋', desc: 'Turning chaos into a curriculum' },
               { value: 'educator', label: 'Educator 💡', desc: 'Holding the room and sparking the brain and heart' }
             ].map(r => (
               <button
@@ -866,7 +866,7 @@ const QALEQuestionnaire = () => {
           <>
             <div className="bg-blue-50 border-l-4 p-6 rounded-r-lg mb-4" style={{borderColor: 'var(--color-blue)'}}>
               <p className="text-gray-800">
-                <strong>To be completed by: Organisation Manager (M) with Course Organiser (C).</strong>
+                <strong>To be completed by: Manager (M) with Course Designer (C).</strong>
               </p>
               <p className="text-gray-700 mt-2">
                 These are the vegetables of QA. You have to eat them before you get dessert.
@@ -1572,7 +1572,7 @@ const QALEQuestionnaire = () => {
               />
             </div>
             <div>
-              <p className="font-bold mb-2">Course Organiser 📋 commits to:</p>
+              <p className="font-bold mb-2">Course Designer 📋 commits to:</p>
               <textarea
                 value={mitigationInputs.organiserCommitment}
                 onChange={(e) => setMitigationInputs({...mitigationInputs, organiserCommitment: e.target.value})}
@@ -1678,8 +1678,8 @@ const QALEQuestionnaire = () => {
       <div className="container mx-auto">
         {currentSection === 'intro' && renderIntro()}
         {currentSection === 'universal' && role === 'organisation' && renderQuestionSection('universal', '☂️ Universal QA Mechanisms (The Umbrella)', 'These are the vegetables of QA. You have to eat them before you get dessert.')}
-        {currentSection === 'role' && role === 'manager' && renderQuestionSection('manager', '🏛️ Organisation Manager', 'Keeping the lights on, the rules legal, and the people sane')}
-        {currentSection === 'role' && role === 'organiser' && renderQuestionSection('organiser', '📋 Course Organiser', 'Turning chaos into a curriculum')}
+        {currentSection === 'role' && role === 'manager' && renderQuestionSection('manager', '🏛️ Manager', 'Keeping the lights on, the rules legal, and the people sane')}
+        {currentSection === 'role' && role === 'organiser' && renderQuestionSection('organiser', '📋 Course Designer', 'Turning chaos into a curriculum')}
         {currentSection === 'role' && role === 'educator' && renderQuestionSection('educator', '💡 Educator', 'Holding the room and sparking the brain and heart')}
         {currentSection === 'reflection' && renderReflection()}
         {currentSection === 'results' && renderResults()}
